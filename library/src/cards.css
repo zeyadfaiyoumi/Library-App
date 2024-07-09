@@ -1,0 +1,31 @@
+.maincont {
+  /* background-color: blue; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  justify-content: center;
+}
+.contenaer {
+  height: 200px;
+  width: 35%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  color: #ffffff;
+  padding: 50px 50px;
+  box-shadow: 2px 2px red;
+  margin: 20px;
+}
+.contenaer h1 {
+  color: red;
+}
+.contenaer:hover {
+  background-color: rgb(39, 39, 40);
+  box-shadow: 3px 3px red;
+}
+.contenaer h1,
+h2,
+h6,
+p {
+  padding-bottom: 20px;
+}
