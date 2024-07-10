@@ -1,20 +1,39 @@
 import "./hedar.css";
-import logo from './loggg.svg';
+import logo from "./loggg.svg";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
+  let UserDate = JSON.parse(localStorage.getItem("users"));
+  let navigate = useNavigate();
+
+  let logout = () => {
+    localStorage.removeItem("users");
+    navigate("/");
+  };
+  let Signup = () => {
+    navigate("/sign");
+  };
+
   return (
     <div>
       <nav className="navbar">
         <div className="navlinks">
           <img src={logo} alt="" className="logo" />
-          <a href="">كتالوج المنتجات </a>
-          <a href="">منتجاتي</a>
-          <a href="">طلباتي</a>
-          <a href="">اعدادات الحساب</a>
-          <a href="">المحفضة المالية</a>
-          <a href="">قصتنا</a>
+          <Link to="/Home"> الرئيسيه </Link>
+          <Link to={""} href="">
+            حولنا
+          </Link>
+          <Link to={""}>تواصل معنى</Link>
+          <Link to="">المحفضة المالية</Link>
+          <Link to={"/"}>قصتنا</Link>
         </div>
         <div className="logout">
-          <a href="">تسجيل الخروج</a>
+          {UserDate ? (
+            <button onClick={logout}>تسجيل خروج</button>
+          ) : (
+            <button onClick={Signup}>تسجيل حساب</button>
+          )}
         </div>
         <div className="humberger">
           <span className="bar"></span>

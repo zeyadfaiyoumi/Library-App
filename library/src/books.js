@@ -33,7 +33,7 @@ const initState = {
     },
     {
       id: 6,
-      title: "نيوتن والتفاحه  ",
+      title: "نيوتن كتاب  ",
       author: "نيوتن  ",
       isbn: "123621",
     },
