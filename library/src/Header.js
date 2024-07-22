@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="navbar">
+      <nav className="navbar z-50">
         <div className="navlinks">
           <img src={logo} alt="" className="logo" />
           <Link to="/Home"> الرئيسيه </Link>
@@ -25,7 +25,7 @@ function Navbar() {
             حولنا
           </Link>
           <Link to={""}>تواصل معنى</Link>
-          <Link to="">المحفضة المالية</Link>
+          <Link to="/books">كتالوج الكتب</Link>
           <Link to={"/"}>قصتنا</Link>
         </div>
         <div className="logout">
